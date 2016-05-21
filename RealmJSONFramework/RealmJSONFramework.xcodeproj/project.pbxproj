@@ -22,6 +22,7 @@
 		807175041CF0C98300AE69DE /* RLMObject+Copying.m in Sources */ = {isa = PBXBuildFile; fileRef = 807174F81CF0C98300AE69DE /* RLMObject+Copying.m */; };
 		807175051CF0C98300AE69DE /* RLMObject+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 807174F91CF0C98300AE69DE /* RLMObject+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		807175061CF0C98300AE69DE /* RLMObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 807174FA1CF0C98300AE69DE /* RLMObject+JSON.m */; };
+		807175081CF0CB1300AE69DE /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807175071CF0CB1300AE69DE /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		807174F81CF0C98300AE69DE /* RLMObject+Copying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMObject+Copying.m"; sourceTree = "<group>"; };
 		807174F91CF0C98300AE69DE /* RLMObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RLMObject+JSON.h"; sourceTree = "<group>"; };
 		807174FA1CF0C98300AE69DE /* RLMObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMObject+JSON.m"; sourceTree = "<group>"; };
+		807175071CF0CB1300AE69DE /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807175081CF0CB1300AE69DE /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +83,7 @@
 				807174D61CF0C97100AE69DE /* RealmJSONFramework */,
 				807174E21CF0C97100AE69DE /* RealmJSONFrameworkTests */,
 				807174D51CF0C97100AE69DE /* Products */,
+				807175091CF0CB1700AE69DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +133,14 @@
 			);
 			name = "Realm+JSON";
 			path = "../../Realm+JSON";
+			sourceTree = "<group>";
+		};
+		807175091CF0CB1700AE69DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				807175071CF0CB1300AE69DE /* Realm.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +381,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RealmJSONFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -385,6 +401,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RealmJSONFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -433,6 +453,7 @@
 				807174EA1CF0C97100AE69DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		807174EB1CF0C97100AE69DE /* Build configuration list for PBXNativeTarget "RealmJSONFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +462,7 @@
 				807174ED1CF0C97100AE69DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
